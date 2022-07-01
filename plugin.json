@@ -1,5 +1,22 @@
 {
 	"version": "1.0",
 	"title": "Alpine theme",
-	"description": "Micro.blog's Alpine theme, similar to Marfa theme."
+	"description": "Micro.blog's Alpine theme, similar to Marfa theme.",
+	"fields": [
+		{
+			"field": "params.alpine_accent_text_color",
+			"label": "Accent text color",
+			"type": "color"
+		},
+		{
+			"field": "params.alpine_accent_background_color",
+			"label": "Accent background color",
+			"type": "color"
+		},
+		{
+			"field": "params.alpine_hover_background_color",
+			"label": "Hover background color",
+			"type": "color"
+		}
+	]
 }

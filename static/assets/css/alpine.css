@@ -96,22 +96,6 @@ nav.main-nav a:hover, #footer a:hover, #post-nav a:hover, p a:hover {
 	box-shadow: inset 0 -25px 0 #EFEFEF;
 }
 
-nav.main-nav a.cta {
-	background: #fff;
-	color: #f29c38;
-	padding: 6px 14px;
-	border: 2px solid #f29c38;
-	border-radius: 20px;
-	white-space: nowrap;
-	box-shadow: none;
-}
-
-nav.main-nav a.cta:hover {
-	background: #fffee4;
-	color: #f29c38;
-	margin-left: 12px;
-}
-
 .site-title {
 	display: inline-block;
 	font-size: 14px;
