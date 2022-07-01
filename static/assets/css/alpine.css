@@ -96,22 +96,6 @@ nav.main-nav a:hover, #footer a:hover, #post-nav a:hover, p a:hover {
 	box-shadow: inset 0 -25px 0 #EFEFEF;
 }
 
-.site-title {
-	display: inline-block;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 1.35;
-	background-image: url(https://micro.blog/manton/avatar.jpg);
-	background-repeat: no-repeat;
-	background-size: 25px 25px;
-	background-position-y: 1px;
-	padding-left: 20px;
-	margin-top: 0px;
-	margin-bottom: 5px;
-	padding-top: 5px;
-	padding-bottom: 10px;
-}
-
 .site-menus {
 	float: right;
 }

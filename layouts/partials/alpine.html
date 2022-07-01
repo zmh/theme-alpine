@@ -1,5 +1,21 @@
 <style>
 
+.site-title {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.35;
+	background-image: url({{ .Site.Author.avatar }});
+	background-repeat: no-repeat;
+	background-size: 25px 25px;
+	background-position-y: 1px;
+	padding-left: 20px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
 nav.main-nav a.cta {
 	background: {{ .Site.Params.alpine_accent_background_color }};
 	color: {{ .Site.Params.alpine_accent_text_color }};
