@@ -1,3 +1,8 @@
+div quoteback-component {
+	display: block;
+	margin-top: 20px;
+}
+
 article.post {
 	margin-top: 20px;
 }
