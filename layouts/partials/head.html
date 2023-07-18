@@ -6,9 +6,8 @@
 
   <title>
       {{- block "title" . -}}
-		{{- .Site.Title -}}&nbsp;-&nbsp;Zachary Hamed
 		{{- if and .Title (ne .Title .Site.Title) }}
-		- {{ .Title }}
+		  {{ .Title }} - Zachary Hamed
 		{{- end -}}
       {{- end -}}
   </title>
