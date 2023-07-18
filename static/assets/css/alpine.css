@@ -81,6 +81,10 @@ pre {
     text-decoration: none;
 }
 
+ul.bookshelf.bookshelf li {
+  list-style-type: none !important;
+}
+
 .bookshelf_book {
   padding-bottom: 7px;
 }
