@@ -6,12 +6,13 @@
   <meta property="og:site_name" content="Zachary Hamed" />
   <title>
       {{- block "title" . -}}
-		{{- if and .Title (ne .Title .Site.Title) }}
-		  {{ .Title }} - Zachary Hamed
-		{{- end -}}
+    {{- .Site.Title -}}
+    {{- if and .Title (ne .Title .Site.Title) }}
+    - {{ .Title }}
+    {{- end -}}
       {{- end -}}
   </title>
-
+  
   <link href="{{ "assets/css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
   <link href="{{ "assets/css/highlight.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
   <link href="{{ "assets/css/alpine.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
