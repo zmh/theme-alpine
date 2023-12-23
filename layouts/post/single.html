@@ -14,6 +14,10 @@
       {{ .Content }}
   </section>
 
+  {{ if .Params.bluesky }}
+    <a class="u-syndication" {{ printf "href=%q" .Params.bluesky.url | safeHTMLAttr }} style="display: none;">Also on Bluesky</a>
+  {{ end }}
+	
   {{ if .Site.Params.include_conversation }}
   <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
   {{ end }}
