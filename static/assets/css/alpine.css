@@ -177,7 +177,7 @@ nav.main-nav {
 @media (prefers-color-scheme: dark) {
 
 	p a {
-	  text-decoration: underline;
+	 /* text-decoration: underline; */
 	}
 
 	.site-title {
