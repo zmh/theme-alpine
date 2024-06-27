@@ -644,6 +644,7 @@ article #post-list li {
 .sidenote li {
     list-style-type: decimal;
     margin-top: -10px;
+    list-style-position: outside;
 }
 
 @media (max-width: 1200px) { /* Adjust breakpoint as needed */
