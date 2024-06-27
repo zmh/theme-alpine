@@ -612,6 +612,7 @@ article #post-list li {
     top: 0;
     width: 200px;
     font-size: 0.9em;
+    height: 100%;
 }
 
 #sidenote-column-left {
@@ -649,4 +650,8 @@ article #post-list li {
 #wrapper {
     position: relative;
     overflow: visible;
+}
+
+body {
+    overflow-x: hidden;
 }
