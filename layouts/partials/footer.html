@@ -17,3 +17,171 @@
 </section>
 
 </footer>
+<!-- sidenotes script -->
+<script>
+  // Adapted Sidenotes Script for Blog (Right-side Preference and Numbered)
+
+if (typeof window.GW === 'undefined') {
+    window.GW = {};
+}
+
+GW.sidenotes = {
+    sidenoteSpacing: 60,
+    footnoteRefs: [],
+    sidenoteDivs: [],
+    sidenoteColumnLeft: null,
+    sidenoteColumnRight: null,
+    verticalOffset: 150,
+    addSidenoteNumber: true // Toggle this to true/false to add/remove sidenote numbers
+};
+
+function constructSidenotes() {
+    console.log("Constructing sidenotes...");
+
+    const mainContent = document.querySelector(".e-content");
+    if (!mainContent) {
+        console.error("Main content element (.e-content) not found");
+        return;
+    }
+    console.log("Main content found:", mainContent);
+
+    // Create sidenote columns
+    GW.sidenotes.sidenoteColumnLeft = document.createElement('div');
+    GW.sidenotes.sidenoteColumnLeft.id = 'sidenote-column-left';
+    GW.sidenotes.sidenoteColumnLeft.className = 'sidenotes-column';
+    GW.sidenotes.sidenoteColumnRight = document.createElement('div');
+    GW.sidenotes.sidenoteColumnRight.id = 'sidenote-column-right';
+    GW.sidenotes.sidenoteColumnRight.className = 'sidenotes-column';
+
+    // Insert sidenote columns
+    const wrapper = document.querySelector("#wrapper");
+    if (!wrapper) {
+        console.error("#wrapper not found");
+        return;
+    }
+    wrapper.insertBefore(GW.sidenotes.sidenoteColumnLeft, wrapper.firstChild);
+    wrapper.appendChild(GW.sidenotes.sidenoteColumnRight);
+
+    GW.sidenotes.footnoteRefs = Array.from(document.querySelectorAll("a.footnote-ref"));
+    console.log("Footnote refs found:", GW.sidenotes.footnoteRefs.length);
+
+    GW.sidenotes.footnoteRefs.forEach((fnRef, i) => {
+        const sidenote = document.createElement("div");
+        sidenote.classList.add("sidenote");
+        sidenote.id = "sn" + (i + 1);
+
+        const footnoteId = fnRef.getAttribute('href').substring(1);
+        const referencedFootnote = document.getElementById(footnoteId);
+
+        if (referencedFootnote) {
+            const footnoteContent = referencedFootnote.cloneNode(true);
+            const backlink = footnoteContent.querySelector('.footnote-backref');
+            if (backlink) {
+                backlink.remove();
+            }
+            
+            // Add sidenote number if enabled
+            if (GW.sidenotes.addSidenoteNumber) {
+                const numberSpan = document.createElement('sup');
+                numberSpan.textContent = i + 1;
+                numberSpan.className = 'sidenote-number';
+                sidenote.appendChild(numberSpan);
+            }
+            
+            sidenote.appendChild(footnoteContent);
+        } else {
+            console.warn(`Footnote content not found for reference ${footnoteId}`);
+            sidenote.textContent = "Footnote content not found";
+        }
+
+        GW.sidenotes.sidenoteDivs.push(sidenote);
+
+        // Always start with the right side
+        GW.sidenotes.sidenoteColumnRight.appendChild(sidenote);
+
+        fnRef.href = "#" + sidenote.id;
+    });
+
+    console.log("Sidenotes constructed:", GW.sidenotes.sidenoteDivs.length);
+}
+
+function updateSidenotePositions() {
+    console.log("Updating sidenote positions...");
+
+    if (window.innerWidth <= 1200) { // Adjust this breakpoint to match your CSS
+        GW.sidenotes.sidenoteColumnLeft.style.display = "none";
+        GW.sidenotes.sidenoteColumnRight.style.display = "none";
+        return;
+    }
+
+    GW.sidenotes.sidenoteColumnLeft.style.display = "";
+    GW.sidenotes.sidenoteColumnRight.style.display = "";
+
+    const mainContent = document.querySelector(".e-content");
+    const mainContentRect = mainContent.getBoundingClientRect();
+
+    let lastRightBottom = 0;
+
+    GW.sidenotes.sidenoteDivs.forEach((sidenote, i) => {
+        const fnRef = GW.sidenotes.footnoteRefs[i];
+        if (!fnRef) {
+            console.warn(`Footnote reference not found for sidenote ${i + 1}`);
+            return;
+        }
+        const refRect = fnRef.getBoundingClientRect();
+
+        // Add the vertical offset to the top position
+        const topPosition = refRect.top - mainContentRect.top + GW.sidenotes.verticalOffset;
+        
+        // Check if there's overlap on the right side
+        if (topPosition < lastRightBottom) {
+            // Move to left side if there's overlap
+            GW.sidenotes.sidenoteColumnLeft.appendChild(sidenote);
+        } else {
+            // Keep on right side
+            GW.sidenotes.sidenoteColumnRight.appendChild(sidenote);
+            lastRightBottom = topPosition + sidenote.offsetHeight + GW.sidenotes.sidenoteSpacing;
+        }
+
+        sidenote.style.top = topPosition + "px";
+        console.log(`Sidenote ${i + 1} positioned at ${topPosition}px relative to main content`);
+    });
+
+    console.log("Sidenote positions updated");
+}
+
+function setHashWithoutScrolling(newHash) {
+    const scrollPositionBeforeNavigate = window.scrollY;
+    location.hash = newHash;
+    requestAnimationFrame(() => {
+        window.scrollTo(0, scrollPositionBeforeNavigate);
+    });
+}
+
+function sidenotesSetup() {
+    console.log("Setting up sidenotes...");
+    constructSidenotes();
+
+    window.addEventListener('resize', updateSidenotePositions);
+    window.addEventListener('scroll', updateSidenotePositions);
+
+    if (document.readyState === "complete") {
+        updateSidenotePositions();
+    } else {
+        window.addEventListener("load", updateSidenotePositions);
+    }
+
+    document.body.addEventListener("click", (event) => {
+        if (event.target.classList.contains('footnote-ref')) {
+            event.preventDefault();
+            const sidenoteId = event.target.getAttribute('href');
+            setHashWithoutScrolling(sidenoteId);
+        }
+    });
+
+    console.log("Sidenotes setup completed");
+}
+
+// Initialize sidenotes
+sidenotesSetup();
+</script>
