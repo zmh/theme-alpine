@@ -629,9 +629,6 @@ article #post-list li {
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
-    background-color: rgba(249, 249, 249, 0.9);
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
     font-size: 0.9em;
     line-height: 1.4;
     max-width: 200px;
@@ -647,6 +644,7 @@ article #post-list li {
 
 .sidenote li {
     list-style-type: none;
+    margin-top: -10px;
 }
 
 @media (max-width: 1200px) { /* Adjust breakpoint as needed */
