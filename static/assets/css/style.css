@@ -617,11 +617,11 @@ article #post-list li {
 }
 
 #sidenote-column-left {
-    left: calc(50% - 580px); /* Adjust based on your layout */
+    left: calc(50% - 460px); /* Adjust based on your layout */
 }
 
 #sidenote-column-right {
-    right: calc(50% - 580px); /* Adjust based on your layout */
+    right: calc(50% - 460px); /* Adjust based on your layout */
 }
 
 .sidenote {
@@ -635,6 +635,13 @@ article #post-list li {
     font-size: 0.9em;
     line-height: 1.4;
     max-width: 200px;
+}
+
+.sidenote-number {
+    font-size: 0.8em;
+    vertical-align: super;
+    margin-right: 3px;
+    color: #666;
 }
 
 @media (max-width: 1200px) { /* Adjust breakpoint as needed */
@@ -657,13 +664,4 @@ article #post-list li {
 
 body {
     overflow-x: hidden;
-}
-
-/* Debug styles */
-.sidenote {
-    box-shadow: 0 0 5px red;
-}
-
-.footnote-ref {
-    background-color: yellow;
 }
