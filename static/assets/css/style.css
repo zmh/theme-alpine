@@ -669,4 +669,7 @@ body {
     overflow-x: hidden;
 }
 
+.footnotes li {
+	list-style-position: outside;
+}
 
