@@ -610,25 +610,43 @@ article #post-list li {
 .sidenotes-column {
     position: absolute;
     top: 0;
-    width: 200px; /* Adjust as needed */
+    width: 200px;
     font-size: 0.9em;
 }
 
 #sidenote-column-left {
-    left: -220px; /* Adjust based on your layout */
+    left: -220px;
 }
 
 #sidenote-column-right {
-    right: -220px; /* Adjust based on your layout */
+    right: -220px;
 }
 
 .sidenote {
     position: absolute;
     width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.4;
 }
 
 @media (max-width: 1000px) {
     .sidenotes-column {
         display: none;
     }
+}
+
+.e-content {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#wrapper {
+    position: relative;
+    overflow: visible;
 }
