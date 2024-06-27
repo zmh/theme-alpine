@@ -613,6 +613,7 @@ article #post-list li {
     width: 200px;
     font-size: 0.9em;
     height: 100%;
+    z-index: 1000;
 }
 
 #sidenote-column-left {
@@ -628,11 +629,12 @@ article #post-list li {
     width: 100%;
     box-sizing: border-box;
     padding: 5px;
-    background-color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0.9);
     border: 1px solid #e0e0e0;
     border-radius: 4px;
     font-size: 0.9em;
     line-height: 1.4;
+    max-width: 200px;
 }
 
 @media (max-width: 1000px) {
@@ -641,17 +643,29 @@ article #post-list li {
     }
 }
 
+#wrapper {
+    position: relative;
+    overflow: visible;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .e-content {
     position: relative;
     max-width: 700px;
     margin: 0 auto;
 }
 
-#wrapper {
-    position: relative;
-    overflow: visible;
-}
-
 body {
     overflow-x: hidden;
+}
+
+/* Debug styles */
+.sidenote {
+    box-shadow: 0 0 5px red;
+}
+
+.footnote-ref {
+    background-color: yellow;
 }
