@@ -617,11 +617,11 @@ article #post-list li {
 }
 
 #sidenote-column-left {
-    left: calc(50% - 560px); /* Adjust based on your layout */
+    left: calc(50% - 580px); /* Adjust based on your layout */
 }
 
 #sidenote-column-right {
-    right: calc(50% - 560px); /* Adjust based on your layout */
+    right: calc(50% - 580px); /* Adjust based on your layout */
 }
 
 .sidenote {
@@ -642,7 +642,7 @@ article #post-list li {
 }
 
 .sidenote li {
-    list-style-type: none;
+    list-style-type: decimal;
     margin-top: -10px;
 }
 
