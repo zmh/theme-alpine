@@ -606,3 +606,29 @@ article #post-list li {
   font-weight: 500;
 }
 
+/* Sidenotes */
+.sidenotes-column {
+    position: absolute;
+    top: 0;
+    width: 200px; /* Adjust as needed */
+    font-size: 0.9em;
+}
+
+#sidenote-column-left {
+    left: -220px; /* Adjust based on your layout */
+}
+
+#sidenote-column-right {
+    right: -220px; /* Adjust based on your layout */
+}
+
+.sidenote {
+    position: absolute;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+    .sidenotes-column {
+        display: none;
+    }
+}
