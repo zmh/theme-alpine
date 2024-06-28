@@ -215,6 +215,12 @@ sup {
 	text-align:center;
 }
 
+header h1 {
+  font-family: "myriad-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 blockquote {
 	padding-left: 15px;
 	border-left: 2px solid #eee;
@@ -333,6 +339,9 @@ Post List
 #post-list h2 {
 	margin-top: 0;
 	line-height: 1.35;
+	font-family: "myriad-pro", sans-serif;
+  	font-weight: 700;
+  	font-style: normal;
 }
 
 /* Footer */
