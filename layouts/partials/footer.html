@@ -7,6 +7,10 @@
     <img src="https://blog.zmh.org/uploads/2024/postage-stamp.png" alt="Stamp Icon" style="width: 48px;height: 48px;position: absolute;right: 25px;top: 18px;rotate: 4deg;">
     <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px;">
         <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://blog.zmh.org/uploads/2024/email-open.png" alt="Email Icon" style="width: 24px; height: 24px;">
+            <span style="color: #555;">Reply or comment {{ partial "reply-by-email.html" . }}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
             <img src="https://blog.zmh.org/uploads/2024/user-add.png" alt="Social Media Icon" style="width: 24px; height: 24px;">
             <span style="color: #555;">Follow me on <a href="https://twitter.com/zmh" style="color: #1da1f2; text-decoration: none;">Twitter</a> and <a href="https://linkedin.com/in/zacharyhamed" style="color: #0077b5; text-decoration: none;">Linkedin</a></span>
         </div>
@@ -15,12 +19,8 @@
             <span style="color: #555;">Get new posts <a href="https://blog.zmh.org/feed.xml" style="color: #ee802f; text-decoration: none;">via RSS</a></span>
         </div>
         <div style="display: flex; align-items: center; gap: 10px;">
-            <img src="https://blog.zmh.org/uploads/2024/email-open.png" alt="Email Icon" style="width: 24px; height: 24px;">
-            <span style="color: #555;">Reply or comment {{ partial "reply-by-email.html" . }}</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 10px;">
             <img src="https://blog.zmh.org/uploads/2024/new-slide.png" alt="Newsletter Icon" style="width: 24px; height: 24px;">
-            <span style="color: #555;">Subscribe to my newsletter for new posts</span>
+            <span style="color: #555;">Or get new posts by email:</span>
         </div>
     </div>
     <form
