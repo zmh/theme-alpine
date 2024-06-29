@@ -6,6 +6,42 @@
     <li><a href="/feed.xml">RSS</a></li>
     <!--<li><a href="/feed.json">JSON Feed</a></li>-->
   </ul>
+
+  <div style="background-color: #fff9c4; padding: 20px; border-radius: 8px; font-family: Arial, sans-serif; max-width: 500px; margin: 20px auto;">
+    <h2 style="color: #333; margin-top: 0; margin-bottom: 20px;">
+        <span style="margin-right: 10px;">⚡</span>Stay Connected
+    </h2>
+    <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="/api/placeholder/24/24" alt="Social Media Icon" style="width: 24px; height: 24px;">
+            <span style="color: #555;">Follow me on <a href="https://twitter.com/zmh" style="color: #1da1f2; text-decoration: none;">Twitter</a> and <a href="https://linkedin.com/in/zacharyhamed" style="color: #0077b5; text-decoration: none;">Linkedin</a></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="/api/placeholder/24/24" alt="RSS Icon" style="width: 24px; height: 24px;">
+            <span style="color: #555;"><a href="https://blog.zmh.org/feed.xml" style="color: #ee802f; text-decoration: none;">Get new posts via RSS</a></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="/api/placeholder/24/24" alt="Email Icon" style="width: 24px; height: 24px;">
+            <span style="color: #555;"><a href="#" style="color: #555; text-decoration: none;">Reply or comment on this post via email</a></span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="/api/placeholder/24/24" alt="Newsletter Icon" style="width: 24px; height: 24px;">
+            <span style="color: #555;">Subscribe to my newsletter for new posts (a few times a year)</span>
+        </div>
+    </div>
+    <form
+        action="https://buttondown.email/api/emails/embed-subscribe/zmh"
+        method="post"
+        target="popupwindow"
+        class="embeddable-buttondown-form"
+        style="display: flex; gap: 10px;"
+    >
+        <input type="email" name="email" placeholder="your@lovely.email" style="flex-grow: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+        <input type="hidden" value="1" name="embed">
+        <input type="submit" value="SUBSCRIBE!" style="background-color: #fdd835; color: #333; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold;">
+    </form>
+</div>
+  
   <form method="get" id="search" action="https://duckduckgo.com/">
     <input type="hidden" name="sites" value="{{ "/" | absURL }}"/>
     <input type="hidden" name="k8" value="#444444"/>
