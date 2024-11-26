@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 {{ partial "head.html" . }}
-<body style="font-family: Verdana, sans-serif;">
+<body>
   {{ partial "header.html" . }}
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-    <div class="two-column-layout" style="display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px;">
-      <main>
-        {{ block "main" . }}{{ end }}
-      </main>
-      <aside class="sidebar">
-        {{ partial "sidebar.html" . }}
-      </aside>
-    </div>
-  </div>
+  <section id="wrapper">
+	{{ block "main" . }}{{ end }}
+  </section>
   {{ partial "footer.html" . }}
   {{ partial "custom_footer.html" . }}
-  {{ range .Site.Params.plugins_js }}
-    <script src="{{ . }}"></script>
-  {{ end }}
+		{{ range .Site.Params.plugins_js }}
+			<script src="{{ . }}"></script>
+		{{ end }}
 </body>
 </html>
