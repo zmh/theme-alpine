@@ -25,11 +25,9 @@
     {{ end }}
   </div>
 
-  <div class="home_blogroll">
+  <div class="sidebar">
     <!-- Add your sidebar content here -->
-    {{ with .Site.GetPage "/blogroll" }}
-      {{ .Content }}
-    {{ end }}
+    {{< blogroll >}}
     <h3>About</h3>
     <p>{{ .Site.Params.description }}</p>
     

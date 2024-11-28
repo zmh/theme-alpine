@@ -24,7 +24,7 @@ html, body {
 
 body {
 	/* font: 17px "Avenir Next", Avenir, "-apple-system", Helvetica, Arial, sans-serif; */
-	font: 11px Verdana, Geneva, Arial, sans-serif;
+	font: 12px Verdana, Geneva, Arial, sans-serif;
 	color: #666;
 	text-rendering: optimizeLegibility;
 }
@@ -96,7 +96,7 @@ nav.main-nav a.cta:hover {
 }
 
 #wrapper {
-	max-width: 500px !important;
+	max-width: 700px !important;
 	margin: 0 auto;
 	padding: 25px;
 }
@@ -707,7 +707,7 @@ body {
   width: 70%;
 }
 
-.home_blogroll {
+.sidebar {
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
@@ -715,17 +715,17 @@ body {
   font-size: 15px;
 }
 
-.home_blogroll h3 {
+.sidebar h3 {
   color: #333;
   margin-bottom: 10px;
 }
 
-.home_blogroll ul {
+.sidebar ul {
   list-style: none;
   padding: 0;
 }
 
-.home_blogroll li {
+.sidebar li {
   margin: 5px 0;
 }
 
@@ -738,7 +738,7 @@ body {
     width: 100%;
   }
   
-  .home_blogroll {
+  .sidebar {
     display: none;
   }
 }
