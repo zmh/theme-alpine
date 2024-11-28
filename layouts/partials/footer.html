@@ -139,7 +139,7 @@ function constructSidenotes() {
 }
 
 function updateSidenotePositions() {
-    console.log("Updating sidenote positions...");
+    // console.log("Updating sidenote positions...");
 
     if (window.innerWidth <= 1200) { // Adjust this breakpoint to match your CSS
         GW.sidenotes.sidenoteColumnLeft.style.display = "none";
@@ -180,7 +180,7 @@ function updateSidenotePositions() {
         console.log(`Sidenote ${i + 1} positioned at ${topPosition}px relative to main content`);
     });
 
-    console.log("Sidenote positions updated");
+    //console.log("Sidenote positions updated");
 }
 
 function setHashWithoutScrolling(newHash) {
