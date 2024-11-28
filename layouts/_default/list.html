@@ -1,3 +1,20 @@
 {{ define "main" }}
-  {{ partial "post-list.html" . }}
+  <div class="content-wrapper">
+    <div class="main-content">
+      {{ partial "post-list.html" . }}
+    </div>
+    <div class="home_blogroll">
+      <!-- Add your sidebar content here -->
+      {{< blogroll >}}
+      <h3>About</h3>
+      <p>{{ .Site.Params.description }}</p>
+      
+      <h3>Recent Posts</h3>
+      <ul>
+        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
 {{ end }}

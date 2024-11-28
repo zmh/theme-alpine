@@ -694,3 +694,51 @@ body {
 	list-style-position: outside;
 }
 
+/* Two-column layout */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-content {
+  width: 70%;
+}
+
+.home_blogroll {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  width: 30%;
+  font-size: 15px;
+}
+
+.home_blogroll h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home_blogroll ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home_blogroll li {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .content-wrapper {
+    display: block;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+  
+  .home_blogroll {
+    display: none;
+  }
+}
