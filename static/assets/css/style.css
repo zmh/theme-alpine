@@ -96,7 +96,7 @@ nav.main-nav a.cta:hover {
 }
 
 #wrapper {
-	max-width: 600px;
+	max-width: 500px !important;
 	margin: 0 auto;
 	padding: 25px;
 }
@@ -123,7 +123,7 @@ h1 {
 }
 
 h2 {
-	font-size: 25px;
+	font-size: 19px;
 	font-weight: 600;
 }
 
