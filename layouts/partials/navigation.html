@@ -1,30 +1,30 @@
-<nav class="main-nav">
-
-	<div class="site-title">
-		<!--<img src="{{ .Site.Author.avatar }}" width="25" height="25" class="site-image">-->		
-		<img src="https://zmh.micro.blog/uploads/2022/6121ca28d0.png" width="25" height="25" class="site-image">		
-		<a href="/">{{ .Site.Title }}</a>
-	</div>
-
-	<div class="site-menus">
-
-	{{ if ne .IsHome true }}
-<!--
-	<a class="normal" href="/"> <span class="arrow">←</span> Home</a>
--->
-	{{ end }}
-
-	{{ range .Site.Menus.main }}
-		{{ if .Page.Params.redirect_url }}
-			<a href="{{ .Page.Params.redirect_url }}">{{ .Name }}</a>
-		{{ else }}
-			<a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
-		{{ end }}
-	{{ end }}
-
-	<!--<a class="cta" href="https://micro.blog/{{ .Site.Author.username }}" rel="me">Also on Micro.blog</a>-->
-	<a class="cta" href="/newsletter">Subscribe</a>
-
-
-	</div>
-</nav>
+<div class="header-container-outer">
+    <div class="header-container">
+        <div class="accent-bar-outer">
+            <div class="accent-bar-inner">
+                <div class="accent-bar">
+                    <a href="/" class="site-title">
+                        {{ if .Site.Author.avatar }}
+                        <img src="{{ .Site.Author.avatar }}" width="25" height="25" class="site-image">
+                        {{ end }}
+                        {{ .Site.Title }}
+                    </a>
+                    <nav class="nav-links">
+                        {{ if ne .IsHome true }}
+                        <!--<a class="nav-link" href="/"> <span class="arrow">←</span> Home</a>-->
+                        {{ end }}
+                        {{ range .Site.Menus.main }}
+                            {{ if .Page.Params.redirect_url }}
+                                <a href="{{ .Page.Params.redirect_url }}" class="nav-link">{{ .Name }}</a>
+                            {{ else }}
+                                <a href="{{ .URL | relLangURL | safeURL }}" class="nav-link">{{ .Name }}</a>
+                            {{ end }}
+                        {{ end }}
+                        <!--<a class="nav-link" href="https://micro.blog/{{ .Site.Author.username }}" rel="me">Also on Micro.blog</a>-->
+                        <a class="nav-link" href="/newsletter">Subscribe</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
