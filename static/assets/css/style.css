@@ -25,7 +25,7 @@ html, body {
 body {
 	/* font: 17px "Avenir Next", Avenir, "-apple-system", Helvetica, Arial, sans-serif; */
 	/* font: 12px Verdana, Geneva, Arial, sans-serif; */
-	font: 13px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif
+	font: 13px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
 	color: #666;
 	text-rendering: optimizeLegibility;
 }
