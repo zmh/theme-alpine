@@ -24,7 +24,8 @@ html, body {
 
 body {
 	/* font: 17px "Avenir Next", Avenir, "-apple-system", Helvetica, Arial, sans-serif; */
-	font: 12px Verdana, Geneva, Arial, sans-serif;
+	/* font: 12px Verdana, Geneva, Arial, sans-serif; */
+	font: 13px "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif
 	color: #666;
 	text-rendering: optimizeLegibility;
 }
@@ -122,7 +123,7 @@ h1 {
 	font-weight: bold;
 }
 
-h2 {
+/* h2 {
 	font-size: 19px;
 	font-weight: 600;
 }
@@ -130,7 +131,7 @@ h2 {
 h3 {
 	font-size: 20px;
 	font-weight: 500;
-}
+} */
 
 p.small {
 	font-size: 14px;
