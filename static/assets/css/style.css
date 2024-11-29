@@ -810,7 +810,7 @@ body {
 
 .accent-bar {
     background: rgb(185, 8, 8);
-    padding: 0.5rem 2rem 0.3rem 2rem;
+    padding: 0.5rem 1rem 0.3rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -858,6 +858,7 @@ body {
     vertical-align: middle;
     margin-right: 0.5rem;
 	width: 25px !important;
+	height: 25px !important;
   	margin-bottom: -1px !important;
 }
 
