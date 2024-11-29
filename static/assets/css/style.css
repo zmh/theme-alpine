@@ -809,12 +809,8 @@ body {
 }
 
 .accent-bar {
-    background: linear-gradient(to bottom, 
-        #e8ff33 0%,
-        #e3fb2f 40%,
-        #d9f026 100%
-    );
-	padding: 0.5rem 2rem 0.3rem 2rem;
+    background: rgb(210, 81, 94);
+    padding: 0.5rem 2rem 0.3rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -824,7 +820,8 @@ body {
 	font-family: "Myriad Pro" !important;
 	font-size: 15px !important;
 	font-weight: bold !important;
-	color: #5b660 !important;
+	color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     border-bottom: none;
     display: flex;
@@ -833,7 +830,7 @@ body {
 }
 
 .site-title:hover {
-    color: #666;
+    color: rgba(255, 255, 255, 1) !important;
 }
 
 .nav-links {
@@ -842,17 +839,18 @@ body {
 }
 
 .nav-link {
-    color: #333;
+    color: rgba(255, 255, 255, 0.9) !important;
     text-decoration: none;
 	font-size: 11px;
 	letter-spacing: 1px;
 	font-family: Avenir;
     text-transform: uppercase;
     border-bottom: none;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link:hover {
-    color: #666;
+    color: rgba(255, 255, 255, 1) !important;
 }
 
 .site-image {
