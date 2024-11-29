@@ -857,6 +857,8 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.5rem;
+	width: 25px !important;
+  	margin-bottom: -1px !important;
 }
 
 @media screen and (max-width: 600px) {
