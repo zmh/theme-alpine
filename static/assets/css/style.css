@@ -820,10 +820,10 @@ body {
 }
 
 .site-title {
-	font-family: "Myriad Pro";
-	font-size: 15px;
-	font-weight: bold;
-	color: #5b660b;
+	font-family: "Myriad Pro" !important;
+	font-size: 15px !important;
+	font-weight: bold !important;
+	color: #5b660 !important;
     text-decoration: none;
     border-bottom: none;
     display: flex;
