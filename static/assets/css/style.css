@@ -727,7 +727,6 @@ body {
   padding-right: 20px;
   box-sizing: border-box;
   width: 200px;
-  font-size: 15px;
 }
 
 .sidebar h3 {
@@ -883,4 +882,77 @@ body {
     .nav-link {
         font-size: 0.8rem;
     }
+}
+
+/* Sidebar Stay in Loop */
+.stay-in-loop {
+  margin-top: 2rem;
+  background-color: rgb(249, 251, 255);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.connect-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.connect-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+}
+
+.connect-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.connect-item a {
+  text-decoration: none;
+}
+
+.connect-item a[href*="twitter"] {
+  color: #1da1f2;
+}
+
+.connect-item a[href*="linkedin"] {
+  color: #0077b5;
+}
+
+.connect-item a[href*="feed"] {
+  color: #ee802f;
+}
+
+.embeddable-buttondown-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.embeddable-buttondown-form input[type="email"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.embeddable-buttondown-form input[type="submit"] {
+  background-color: rgb(53, 141, 253);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.embeddable-buttondown-form input[type="submit"]:hover {
+  background-color: rgb(45, 120, 220);
 }

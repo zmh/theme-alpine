@@ -33,11 +33,43 @@
     <h3>Recent Posts</h3>
     <ul>
       {{ range first 10 (where .Site.RegularPages "Type" "post") }}
-	  	{{ if .Title }}
-        	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-	  	{{ end }}
+        {{ if .Title }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
       {{ end }}
     </ul>
+
+    <div class="stay-in-loop">
+      <h3>Stay in the loop</h3>
+      <div class="connect-options">
+        <div class="connect-item">
+          <img src="https://blog.zmh.org/uploads/2024/email-open.png" alt="Email Icon">
+          <span>Reply or comment {{ partial "reply-by-email.html" . }}</span>
+        </div>
+        <div class="connect-item">
+          <img src="https://blog.zmh.org/uploads/2024/user-add.png" alt="Social Media Icon">
+          <span>Follow me on <a href="https://twitter.com/zmh">Twitter</a> and <a href="https://linkedin.com/in/zacharyhamed">Linkedin</a></span>
+        </div>
+        <div class="connect-item">
+          <img src="https://blog.zmh.org/uploads/2024/feed.png" alt="RSS Icon">
+          <span>Get new posts <a href="https://blog.zmh.org/feed.xml">via RSS</a></span>
+        </div>
+        <div class="connect-item">
+          <img src="https://blog.zmh.org/uploads/2024/new-slide.png" alt="Newsletter Icon">
+          <span>Or get new posts by email:</span>
+        </div>
+      </div>
+      <form
+        action="https://buttondown.email/api/emails/embed-subscribe/zmh"
+        method="post"
+        target="popupwindow"
+        class="embeddable-buttondown-form"
+      >
+        <input type="email" name="email" placeholder="your@lovely.email">
+        <input type="hidden" value="1" name="embed">
+        <input type="submit" value="SUBSCRIBE">
+      </form>
+    </div>
   </div>
 </div>
 {{ end }}
