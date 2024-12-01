@@ -693,6 +693,7 @@ article #post-list li {
 	max-width: 850px !important;
 	margin: 0 auto;	
 	padding-top: 0px !important;
+	margin-top: 30px;
 }
 
 .e-content {
@@ -724,7 +725,7 @@ body {
   box-sizing: border-box;
   font-size: 10px;
   line-height: 1.7;
-  width: 200px;
+  width: 260px;
   flex-shrink: 0;
 }
 
@@ -732,7 +733,7 @@ body {
 	color: #a4a4a4;
 	text-transform: UPPERCASE;
 	letter-spacing: 1px;
-	border-bottom: 1px dotted gray;
+	border-bottom: 1px dotted #c8c8c8;
 	padding-bottom: 3px;
   margin-bottom: 10px;
   margin-top: 25px;
@@ -969,6 +970,3 @@ body {
   width: fit-content;
 }
 
-.site-nav-grid a:hover {
-  text-decoration: underline;
-}
