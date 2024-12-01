@@ -112,7 +112,7 @@ nav.main-nav a.cta:hover {
 /* hide pages from plugins */
 nav a[href='/stats/'] { display: none; }
 nav a[href='/search/'] { display: none; }
-nav a[href='/newsletter/'] { display: none; }
+nav a[href='/newsletter'] { display: none; }
 
 /* Typography */
 
@@ -531,11 +531,6 @@ h2.headline {
 	h2 {
 		font-size: 22px;
 	}
-
-	h3 {
-		font-size: 19px;
-	}
-
 }
 
 video {
