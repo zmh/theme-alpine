@@ -112,7 +112,7 @@ nav.main-nav a.cta:hover {
 /* hide pages from plugins */
 nav a[href='/stats/'] { display: none; }
 nav a[href='/search/'] { display: none; }
-nav a[href='/subscribe/'] { display: none; }
+nav a[href='/newsletter/'] { display: none; }
 
 /* Typography */
 
