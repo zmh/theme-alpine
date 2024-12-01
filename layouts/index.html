@@ -27,9 +27,14 @@
 
   <div class="sidebar">
     <!-- Add your sidebar content here -->
-    <h3>About</h3>
-	{{ partial "navigation.html" . }}
-	
+    <h3>Inside zmh.org</h3>
+	<a href="/">Home</a>
+	<a href="/about/">About me</a>
+	<a href="/stats/">Stats</a>
+	<a href="/photos/">Photos</a>
+	<a href="/bookshelf/">Bookshelf</a>
+	<a href="/archive/">Archives</a>
+
     <h3>Recent Posts</h3>
 	{{ range first 10 (where .Site.RegularPages "Type" "post") }}
 	{{ if .Title }}
