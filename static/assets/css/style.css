@@ -727,6 +727,7 @@ body {
   padding-right: 20px;
   box-sizing: border-box;
   font-size: 10px;
+  line-height: 1.7;
 }
 
 .sidebar h3 {
@@ -892,8 +893,8 @@ body {
 .connect-options {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 1rem;
+  gap: 7px;
+  margin-bottom: 10px;
 }
 
 .connect-item {
@@ -926,28 +927,28 @@ body {
 
 .embeddable-buttondown-form {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 .embeddable-buttondown-form input[type="email"] {
-  padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 14px;
-  width: 100%;
+  padding: 4px 6px;
+  font-size: 10px;
+  width: 60%;
+  height: 25px;
 }
 
 .embeddable-buttondown-form input[type="submit"] {
-  background-color: rgb(53, 141, 253);
   color: white;
   border: none;
-  padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-  width: 100%;
+  background-color: rgb(138, 141, 145);
+  font-size: 10px;
+  width: 36%;
+  font-family: inherit;
+  height: 25px;
 }
 
 .embeddable-buttondown-form input[type="submit"]:hover {
