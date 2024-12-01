@@ -734,6 +734,26 @@ body {
   flex-shrink: 0;
 }
 
+.sidebar h3 {
+	color: #a4a4a4;
+	text-transform: UPPERCASE;
+	letter-spacing: 1px;
+	border-bottom: 1px dotted gray;
+	padding-bottom: 3px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.sidebar h3:first-child {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+
 @media screen and (max-width: 600px) {
   .content-wrapper {
     flex-direction: column;
