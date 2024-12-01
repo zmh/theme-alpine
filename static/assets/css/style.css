@@ -100,7 +100,7 @@ nav.main-nav a.cta:hover {
 	max-width: 850px !important;
 	margin: 0 auto;
 	padding: 25px;
-	padding-top: 0px;
+	padding-top: 0px !important;
 }
 
 .home #avatar {
@@ -953,4 +953,17 @@ body {
 
 .embeddable-buttondown-form input[type="submit"]:hover {
   background-color: rgb(45, 120, 220);
+}
+
+/* Two-column navigation grid */
+.site-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 10px;
+  margin-bottom: 15px;
+}
+
+.site-nav-grid a {
+  text-decoration: none;
+  color: inherit;
 }
