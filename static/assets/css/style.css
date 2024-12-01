@@ -737,6 +737,11 @@ body {
 	border-bottom: 1px dotted gray;
 	padding-bottom: 3px;
   margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.sidebar h3:first-child {
+  margin-top: 0;
 }
 
 .sidebar ul {
@@ -966,4 +971,10 @@ body {
 .site-nav-grid a {
   text-decoration: none;
   color: inherit;
+  display: inline;
+  width: fit-content;
+}
+
+.site-nav-grid a:hover {
+  text-decoration: underline;
 }
