@@ -726,11 +726,15 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
-  width: 200px;
+  font-size: 10px;
 }
 
 .sidebar h3 {
-  color: #333;
+	color: #a4a4a4;
+	text-transform: UPPERCASE;
+	letter-spacing: 1px;
+	border-bottom: 1px dotted gray;
+	padding-bottom: 3px;
   margin-bottom: 10px;
 }
 
@@ -774,7 +778,7 @@ body {
             #ebebeb 4px
         );
     position: relative;
-    height: 70px;
+    height: 65px;
 }
 
 .header-container::after {
@@ -885,13 +889,6 @@ body {
 }
 
 /* Sidebar Stay in Loop */
-.stay-in-loop {
-  margin-top: 2rem;
-  background-color: rgb(249, 251, 255);
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
 .connect-options {
   display: flex;
   flex-direction: column;
@@ -907,8 +904,8 @@ body {
 }
 
 .connect-item img {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 .connect-item a {

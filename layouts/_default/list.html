@@ -6,14 +6,12 @@
     <div class="sidebar">
       <!-- Add your sidebar content here -->
       <h3>About</h3>
-      <p>{{ .Site.Params.description }}</p>
+      {{ partial "navigation.html" . }}
       
       <h3>Recent Posts</h3>
-      <ul>
-        {{ range first 5 (where .Site.RegularPages "Type" "post") }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-      </ul>
+      {{ range first 5 (where .Site.RegularPages "Type" "post") }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+      {{ end }}
     </div>
   </div>
 {{ end }}
