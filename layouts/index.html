@@ -35,13 +35,6 @@
 	<a href="/bookshelf/">Bookshelf</a>
 	<a href="/archive/">Archives</a>
 
-    <h3>Recent Posts</h3>
-	{{ range first 10 (where .Site.RegularPages "Type" "post") }}
-	{{ if .Title }}
-		<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-	{{ end }}
-	{{ end }}
-
     <div class="stay-in-loop">
       <h3>Stay in the loop</h3>
       <div class="connect-options">
@@ -73,6 +66,18 @@
         <input type="submit" value="SUBSCRIBE">
       </form>
     </div>
+
+	<h3>Recent Posts</h3>
+	{{ range first 10 (where .Site.RegularPages "Type" "post") }}
+	{{ if .Title }}
+		<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+	{{ end }}
+	{{ end }}
+
+	<h3>Browse by topic</h3>
+	{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+		<a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a> ({{ $taxonomy.Count }})<br>
+	{{ end }}
   </div>
 </div>
 {{ end }}
