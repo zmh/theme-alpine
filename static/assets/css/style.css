@@ -765,7 +765,7 @@ body {
 /* Header */
 .header-container-outer {
     width: 100%;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #bdbdbd;
 }
 
 .header-container {
@@ -776,7 +776,7 @@ body {
             #f5f5f5,
             #f5f5f5 2px,
             #ebebeb 2px,
-            #ebebeb 4px
+            #ebebeb 3px
         );
     position: relative;
     height: 65px;
@@ -797,7 +797,7 @@ body {
 .accent-bar-outer {
     margin: 0 auto;
     max-width: 700px;
-    border: 1px solid #666;
+    border: 1px solid #bdbdbd;
     border-bottom: none;
     position: absolute;
     bottom: 0;
@@ -813,7 +813,7 @@ body {
 }
 
 .accent-bar {
-    background: rgb(29, 106, 17);
+    background: rgb(198, 210, 196);
     padding: 0.5rem 1rem 0.3rem 1rem;
     display: flex;
     justify-content: space-between;
@@ -821,20 +821,15 @@ body {
 }
 
 .site-title {
-	font-family: "Myriad Pro" !important;
-	font-size: 15px !important;
-	font-weight: bold !important;
-	color: rgba(255, 255, 255, 0.9) !important;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     border-bottom: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-.site-title:hover {
-    color: rgba(255, 255, 255, 1) !important;
+	font-size: 11px !important;
+	color: #8a8a8a;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 .nav-links {
@@ -861,8 +856,8 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.5rem;
-	width: 25px !important;
-	height: 25px !important;
+	width: 20px !important;
+	height: 20px !important;
   	margin-bottom: -1px !important;
 	border-radius: 0px !important;
 }
