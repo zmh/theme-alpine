@@ -28,16 +28,14 @@
   <div class="sidebar">
     <!-- Add your sidebar content here -->
     <h3>About</h3>
-    <p>{{ .Site.Params.description }}</p>
-    
+	{{ partial "navigation.html" . }}
+	
     <h3>Recent Posts</h3>
-    <ul>
-      {{ range first 10 (where .Site.RegularPages "Type" "post") }}
-        {{ if .Title }}
-          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-      {{ end }}
-    </ul>
+	{{ range first 10 (where .Site.RegularPages "Type" "post") }}
+	{{ if .Title }}
+		<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+	{{ end }}
+	{{ end }}
 
     <div class="stay-in-loop">
       <h3>Stay in the loop</h3>
