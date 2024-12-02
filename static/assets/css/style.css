@@ -350,14 +350,12 @@ Post List
 }
 
 #post-list h2 {
-	font-family: "myriad-pro", sans-serif;
   	font-weight: 700;
   	font-style: normal;
 }
 
 #post-list h2:first-of-type {
-	margin-top: 0;
-	line-height: 1.35;
+	margin-top: 10px;
 	font-size: 17px;
 
 	a {
@@ -941,9 +939,6 @@ body {
   height: 25px;
 }
 
-.embeddable-buttondown-form input[type="submit"]:hover {
-  background-color: rgb(45, 120, 220);
-}
 
 /* Two-column navigation grid */
 .site-nav-grid {
