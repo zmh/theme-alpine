@@ -1,6 +1,9 @@
 {{ define "main" }}
   <div class="content-wrapper">
     <div class="main-content">
+      {{ if eq .Kind "taxonomy" }}
+        <h1 class="p-name">{{ .Title }}</h1>
+      {{ end }}
       {{ partial "post-list.html" . }}
     </div>
     {{ partial "sidebar.html" . }}
