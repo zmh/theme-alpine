@@ -224,14 +224,10 @@ sup {
     font-size: smaller;
 }
 
-.post header {
-	text-align:center;
-}
-
 header h1 {
-  font-family: "myriad-pro", sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-size: 17px;
 }
 
 blockquote {
@@ -418,9 +414,9 @@ footer section {
 	border-bottom: 1px solid #eee;
 }
 
-.post {
-	margin: 120px 0 0 0;
-}
+.h-entry.post {
+	margin-top: 0px;
+  }
 
 /* Post Navigation */
 #post-nav {
@@ -476,7 +472,7 @@ footer section {
 
 h2.headline {
 	margin-top: 0;
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 }
 
 /* Form */
