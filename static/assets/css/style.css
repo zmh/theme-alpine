@@ -354,18 +354,15 @@ Post List
   	font-style: normal;
 }
 
-#post-list h2:first-of-type {
+#post-list header h2 {
 	margin-top: 10px;
 	font-size: 17px;
-
-	a {
-		color: inherit;
-		text-decoration: none;
-		box-shadow: none;
-		border-bottom: none;
-	}
 }
 
+#post-list header h2 a {
+	color: inherit;
+	text-decoration: none;
+}
 
 /* Footer */
 
@@ -954,4 +951,3 @@ body {
   display: inline;
   width: fit-content;
 }
-
