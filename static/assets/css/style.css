@@ -345,7 +345,7 @@ Post List
 	margin-bottom: 0;
 }
 
-#post-list h2 {
+#post-list h2, .post-body h2 {
   	font-weight: 700;
   	font-style: normal;
 }
