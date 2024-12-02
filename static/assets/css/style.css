@@ -418,6 +418,10 @@ footer section {
 	margin-top: 0px;
   }
 
+.p-name {
+	margin-top: 0px !important;
+}
+
 /* Post Navigation */
 #post-nav {
 	text-align:center;
