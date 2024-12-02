@@ -369,6 +369,7 @@ footer section {
 
 #footer {
 	text-align: center;
+	margin: 40px 0;
 }
 
 #footer a {
@@ -492,6 +493,34 @@ h2.headline {
 	margin-top: 20px;
 	border-radius: 17px;
 	-webkit-appearance: none;
+}
+
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-form button {
+  padding: 6px 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #333;
 }
 
 /* Media Queries */

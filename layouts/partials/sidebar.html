@@ -9,6 +9,12 @@
     <a href="/archive/">Archives</a>
   </div>
 
+  <h3>Search</h3>
+  <form action="https://blog.zmh.org/search/" method="get" class="search-form">
+    <input type="text" name="q" placeholder="Search the blog...">
+    <button type="submit">Search</button>
+  </form>
+
   <div class="stay-in-loop">
     <h3>Stay in the loop</h3>
     <div class="connect-options">
@@ -53,3 +59,4 @@
     <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a> ({{ $taxonomy.Count }})<br>
   {{ end }}
 </div>
+{{ end }}
