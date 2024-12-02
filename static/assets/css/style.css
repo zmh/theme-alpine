@@ -374,7 +374,6 @@ Post List
 footer section {
 	margin: 0 auto;
 	text-align: center;
-	padding: 35px 0 80px 0;
 }
 
 #footer {
@@ -757,7 +756,6 @@ body {
   .sidebar {
     width: 100%;
     padding: 20px 0;
-    border-top: 1px dotted #ccc;
     margin-top: 20px;
   }
 }
@@ -863,9 +861,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .accent-bar {
-        padding: 0.75rem 1rem;
-    }
     
     .accent-bar-outer {
         width: calc(100% - 2rem);
