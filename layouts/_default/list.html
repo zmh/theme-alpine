@@ -2,7 +2,7 @@
   <div class="content-wrapper">
     <div class="main-content">
       {{ if and (eq .Kind "term") (eq .Type "categories") }}
-        <h1 class="p-name">Category: {{ .Title }}</h1>
+        <h1 class="p-name">posts tagged '{{ .Title }}'</h1><hr>
       {{ end }}
       {{ partial "post-list.html" . }}
     </div>
