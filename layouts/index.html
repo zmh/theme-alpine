@@ -25,61 +25,6 @@
     {{ end }}
   </div>
 
-  <div class="sidebar">
-    <!-- Add your sidebar content here -->
-    <h3>Inside zmh.org</h3>
-    <div class="site-nav-grid">
-      <a href="/">Home</a>
-      <a href="/about/">About me</a>
-      <a href="/stats/">Stats</a>
-      <a href="/photos/">Photos</a>
-      <a href="/bookshelf/">Bookshelf</a>
-      <a href="/archive/">Archives</a>
-    </div>
-
-    <div class="stay-in-loop">
-      <h3>Stay in the loop</h3>
-      <div class="connect-options">
-        <div class="connect-item">
-          <img src="https://blog.zmh.org/uploads/2024/email-open.png" alt="Email Icon">
-          <span>Reply or comment {{ partial "reply-by-email.html" . }}</span>
-        </div>
-        <div class="connect-item">
-          <img src="https://blog.zmh.org/uploads/2024/user-add.png" alt="Social Media Icon">
-          <span>Follow me on <a href="https://twitter.com/zmh">Twitter</a> and <a href="https://linkedin.com/in/zacharyhamed">Linkedin</a></span>
-        </div>
-        <div class="connect-item">
-          <img src="https://blog.zmh.org/uploads/2024/feed.png" alt="RSS Icon">
-          <span>Get new posts <a href="https://blog.zmh.org/feed.xml">via RSS</a></span>
-        </div>
-        <div class="connect-item">
-          <img src="https://blog.zmh.org/uploads/2024/new-slide.png" alt="Newsletter Icon">
-          <span>Or get new posts by email:</span>
-        </div>
-      </div>
-      <form
-        action="https://buttondown.email/api/emails/embed-subscribe/zmh"
-        method="post"
-        target="popupwindow"
-        class="embeddable-buttondown-form"
-      >
-        <input type="email" name="email" placeholder="your@lovely.email">
-        <input type="hidden" value="1" name="embed">
-        <input type="submit" value="SUBSCRIBE">
-      </form>
-    </div>
-
-	<h3>Recent Posts</h3>
-	{{ range first 10 (where .Site.RegularPages "Type" "post") }}
-	{{ if .Title }}
-		<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-	{{ end }}
-	{{ end }}
-
-	<h3>Browse by topic</h3>
-	{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-		<a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a> ({{ $taxonomy.Count }})<br>
-	{{ end }}
-  </div>
+  {{ partial "sidebar.html" . }}
 </div>
 {{ end }}
