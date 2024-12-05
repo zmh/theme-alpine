@@ -975,6 +975,21 @@ body {
   color: #ee802f;
 }
 
+/* Two-column navigation grid */
+.site-nav-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0 10px;
+	margin-bottom: 15px;
+  }
+  
+  .site-nav-grid a {
+	text-decoration: none;
+	color: inherit;
+	display: inline;
+	width: fit-content;
+  }
+
 .embeddable-buttondown-form {
   display: flex;
   gap: 5px;
