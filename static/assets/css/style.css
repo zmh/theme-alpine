@@ -824,6 +824,20 @@ body {
                 #333333 3px
             );
     }
+
+	.accent-bar-inner {
+		border: 1px solid #fff;
+		border: 1px solid #303030;
+		}
+
+	.accent-bar-outer {
+	border: 1px solid #bdbdbd;
+	border: 1px solid #404040;
+	}
+
+	.accent-bar {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.62) 0 0);
+	}
 }
 
 .header-container::after {
