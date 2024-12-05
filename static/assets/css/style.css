@@ -811,7 +811,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
     .header-container-outer {
-        border-bottom: 1px solid #404040;
+        border-bottom: 1px solid #404040 !important;
     }
     
     .header-container {
@@ -826,17 +826,15 @@ body {
     }
 
 	.accent-bar-inner {
-		border: 1px solid #fff;
-		border: 1px solid #303030;
+		border: 1px solid #303030 !important;
 		}
 
 	.accent-bar-outer {
-	border: 1px solid #bdbdbd;
-	border: 1px solid #404040;
+	border: 1px solid #404040 !important;
 	}
 
 	.accent-bar {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.62) 0 0);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.62) 0 0) !important;
 	}
 }
 
