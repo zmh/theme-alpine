@@ -8,12 +8,9 @@
             <a class="u-url dates" href="{{ .Permalink }}">{{ .Date.Format "Jan 2, 2006 at 3:04 PM" }}</a>
           </time>
           {{ with .Params.categories }}
-            <span class="category-separator">&middot;</span>
-            {{ range $index, $element := . }}
-              <span class="p-category"><a href="{{ "/categories/" | relLangURL }}{{ $element | urlize }}">{{ $element }}</a></span>
-              {{if ne (add $index 1) (len .)}}
-                <span class="category-separator">&middot;</span>
-              {{end}}
+            {{ range . }}
+              <span class="p-category"><a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></span>
+              <span class="category-separator">&middot;</span>
             {{ end }}
           {{ end }}
           {{ with .Params.audio }}
