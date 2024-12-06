@@ -1015,10 +1015,10 @@ body {
 }
 
 .p-category {
-    font-weight: 500;
-    font-size: 11px;
-    color: rgb(187, 187, 187);
-    text-transform: lowercase;
+    font-weight: 500 !important;
+    font-size: 11px !important;
+    color: rgb(187, 187, 187) !important;
+    text-transform: lowercase !important;
 }
 
 .p-category a {
