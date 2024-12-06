@@ -7,6 +7,11 @@
           <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">
             <a class="u-url dates" href="{{ .Permalink }}">{{ .Date.Format "Jan 2, 2006 at 3:04 PM" }}</a>
           </time>
+          {{ with .Params.categories }}
+            {{ range . }}
+              <span class="p-category">→ {{ . }}</span>
+            {{ end }}
+          {{ end }}
           {{ with .Params.audio }}
             <script type="text/javascript" src="https://micro.blog/narration.js?url={{ . }}"></script>
           {{ end }}
