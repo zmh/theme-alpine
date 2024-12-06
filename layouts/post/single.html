@@ -3,9 +3,6 @@
   <div class="main-content">
     <article class="h-entry post">
       <header>
-        {{ with .Title }}
-        <h1 class="p-name">{{ . }}</h1>
-        {{ end }}
         <h2 class="headline">
           <time class="dt-published" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">
             <a class="u-url dates" href="{{ .Permalink }}">{{ .Date.Format "Jan 2, 2006 at 3:04 PM" }}</a>
@@ -14,6 +11,9 @@
             <script type="text/javascript" src="https://micro.blog/narration.js?url={{ . }}"></script>
           {{ end }}
         </h2>
+        {{ with .Title }}
+        <h1 class="p-name">{{ . }}</h1>
+        {{ end }}
       </header>
       <section class="e-content post-body">
           {{ .Content }}
