@@ -351,13 +351,15 @@ Post List
 }
 
 #post-list header h2 {
-	margin-top: 10px;
+	margin-top: 8px;
+	margin-bottom: -3px;
 	font-size: 17px;
 }
 
 #post-list header h2 a {
 	color: inherit;
 	text-decoration: none;
+	border-bottom: none;
 }
 
 /* Footer */
@@ -420,7 +422,7 @@ footer section {
   }
 
 .p-name {
-	margin-top: 7px !important;
+	margin-top: -10px !important;
 	font-size: 17px;
 }
 
