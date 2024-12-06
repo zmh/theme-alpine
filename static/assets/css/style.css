@@ -1026,10 +1026,6 @@ body {
     text-decoration: none;
 }
 
-.p-category a:hover {
-    text-decoration: underline;
-}
-
 .headline .category-separator {
     color: rgb(187, 187, 187);
     margin: 0 0.3em;
