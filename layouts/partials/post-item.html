@@ -2,12 +2,7 @@
 <article class="h-entry">
   <a href="{{ .Permalink }}" class="u-url">
     <aside class="dates">
-      <time datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}" class="dt-published">· {{ .Date.Format "Jan 2, 2006" }}</time>
-      {{ with .Params.categories }}
-        {{ range . }}
-          <span class="p-category"> · {{ . }}</span>
-        {{ end }}
-      {{ end }}
+      <time datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}" class="dt-published">→ {{ .Date.Format "Jan 2, 2006" }}</time>
     </aside>
     </a>
   {{ if .Title }}
