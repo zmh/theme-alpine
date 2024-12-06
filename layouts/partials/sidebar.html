@@ -54,4 +54,9 @@
   {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
     <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a> ({{ $taxonomy.Count }})<br>
   {{ end }}
+
+  <h3>Other blogs</h3>
+  <a href="https://xn--sr8hvo.ws/previous">←</a>
+  <a href="https://xn--sr8hvo.ws">IndieWeb</a>
+  <a href="https://xn--sr8hvo.ws/next">→</a>
 </div>
