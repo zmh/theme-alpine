@@ -1015,13 +1015,31 @@ body {
 }
 
 .p-category {
-    color: #737373;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 11px;
+    color: rgb(187, 187, 187);
     text-transform: lowercase;
 }
 
+.p-category a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.p-category a:hover {
+    text-decoration: underline;
+}
+
+.headline .category-separator {
+    color: rgb(187, 187, 187);
+    margin: 0 0.3em;
+}
+
 @media (prefers-color-scheme: dark) {
-    .p-category {
+    .p-category, .headline .category-separator {
         color: #999;
+    }
+    .p-category a {
+        color: inherit;
     }
 }
