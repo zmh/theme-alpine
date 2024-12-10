@@ -471,6 +471,7 @@ footer section {
 	width: 100%;
 	text-transform: uppercase;
 	padding-top: 5px;
+	letter-spacing: 1px;
 }
 
 #post-list li:first-child .dates {
@@ -1030,7 +1031,7 @@ body {
 
 .headline .category-separator {
     color: rgb(187, 187, 187);
-    margin: 0 0.3em;
+    margin: 0 0.1em;
 }
 
 @media (prefers-color-scheme: dark) {
